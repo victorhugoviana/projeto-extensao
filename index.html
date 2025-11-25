@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Score | Lançamentos e Ofertas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-default">
+
+    <main class="relative min-h-screen">
+        
+        <header class="site-header sticky top-0 z-50">
+            <div class="header-inner">
+                <div class="header-row-top">
+                    <div class="left-group">
+                        <div class="logo"><img src="imagens/LOGO.jpeg" alt="Game Score Logo"></div>
+                    </div>
+                    
+                    <div class="search-wrap">
+                        <div class="search" role="search">
+                            <input type="text" 
+                                placeholder="Estou procurando por..." 
+                                class="search-input" 
+                                id="search-input">
+                            <button class="search-btn" aria-label="Buscar"><img src="imagens/lupa.png" alt="Ícone de Lupa"></button>
+                        </div>
+                        <div id="search-results-dropdown" class="search-results-dropdown"></div>
+                    </div>
+
+                    <div class="auth">
+                        <a href="login.html" class="btn login">Login</a>
+                        <a href="login.html" class="btn signup">Cadastre-se</a>
+                        <button class="relative flex items-center cursor-pointer text-white" id="cart-icon-btn" aria-label="Abrir Carrinho">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 12.08a2 2 0 0 0 1.77 1.62l9.62.77a2 2 0 0 0 1.96-2.14L23 5H6"></path></svg>
+                            <span class="cart-count absolute -top-2 -right-2 bg-red-600 rounded-full w-5 h-5 flex items-center justify-center text-xs">0</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <nav class="header-row-bottom">
+                    <div class="nav-group">
+                        <a href="#ps-carousel" class="nav-link">Playstation</a> 
+                        <a href="#xbox-carousel" class="nav-link">XBOX</a>
+                        <a href="#nintendo-carousel" class="nav-link">Nintendo</a>
+                        <a href="#assinaturas" class="nav-link">Assinaturas</a>
+                    </div>
+                    <div class="nav-group">
+                        <a href="#nossa-equipe" class="nav-link">Nossa Equipe</a>
+                        <a href="#contato-nossa-equipe" class="nav-link">Contato</a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="hero-slider-container">
+            <div class="slide" style="background-image: url('imagens/Game_Score/Carrossel_img1.png');"><div class="slide-content"></div></div>
+            <div class="slide" style="background-image: url('imagens/Game_Score/Carrossel_img2.png');"><div class="slide-content"></div></div>
+            <div class="slide" style="background-image: url('imagens/Game_Score/Carrossel_img3.png');"><div class="slide-content"></div></div>
+            <div class="slide" style="background-image: url('imagens/Game_Score/Carrossel_img4.png');"><div class="slide-content"></div></div>
+            <div class="slide" style="background-image: url('imagens/Game_Score/Carrossel_img5.png');"><div class="slide-content"></div></div>
+            
+            <button class="prev-button control-button" aria-label="Slide Anterior"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="next-button control-button" aria-label="Próximo Slide"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+            
+            <div class="platform-ctas-container">
+                <button class="cta-platform green"><img src="imagens/Game_Score/Xbox.png" alt="XBOX"></button>
+                <button class="cta-platform blue"><img src="imagens/Game_Score/Playstation.png" alt="PlayStation"></button>
+                <button class="cta-platform red"><img src="imagens/Game_Score/Nintendo.png" alt="Nintendo"></button>
+            </div>
+            
+            <div class="slider-indicators"></div>
+        </section>
+
+        <section class="features-bar-container">
+            <div class="features-bar">
+                <div class="feature-item">
+                    <img src="imagens/icones/oficial.png" alt="Loja Oficial" class="feature-icon">
+                    <div><strong>Loja 100% Oficial</strong></div>
+                </div>
+                <div class="feature-item">
+                    <img src="imagens/icones/seguro.png" alt="Experiência Segura" class="feature-icon">
+                    <div><strong>Experiência<br>Segura e simples</strong></div>
+                </div>
+                <div class="feature-item">
+                    <img src="imagens/icones/joystick.png" alt="Os melhores jogos" class="feature-icon">
+                    <div><strong>Divirta-se com<br>Os melhores jogos</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="platform-showcase-container">
+            <div class="platform-carousel-wrapper" id="xbox-carousel">
+                <div class="platform-sidebar xbox-bg">
+                    <img src="imagens/Game_Score/Xbox.png" alt="XBOX" class="platform-logo">
+                    <h3>Descubra seu próximo jogo favorito</h3>
+                    
+                </div>
+                <div class="platform-slider">
+                    <div class="platform-slides-inner">
+                        <div class="platform-product-card" data-title="Grand Theft Auto V" data-price="99.90" data-image-src="imagens/XBOX/GTA.png"><img src="imagens/XBOX/GTA.png" alt="GTA V" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Grand Theft Auto V</h4><span class="platform-price-old">De: R$99,90</span><span class="platform-price-new">Por: 5X de R$23,98</span></div></div>
+                        <div class="platform-product-card" data-title="F1® 25" data-price="349.90" data-image-src="imagens/XBOX/F1.png"><img src="imagens/XBOX/F1.png" alt="F1 25" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">F1® 25</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 5X de R$23,98</span></div></div>
+                        <div class="platform-product-card" data-title="Clair Obscur Expedition 33" data-price="349.90" data-image-src="imagens/XBOX/Clair.png"><img src="imagens/XBOX/Clair.png" alt="Clair Obscur Expedition 33" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Clair Obscur Expedition 33</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 5X de R$23,98</span></div></div>
+                        <div class="platform-product-card" data-title="Battlefield 6" data-price="349.90" data-image-src="imagens/XBOX/batllefield.jpg"><img src="imagens/XBOX/batllefield.jpg" alt="Battlefield 6" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Battlefield 6</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 5X de R$23,98</span></div></div>
+                        <div class="platform-product-card" data-title="Forza Horizon 5" data-price="99.90" data-image-src="imagens/XBOX/Forza.jpg"><img src="imagens/XBOX/Forza.jpg" alt="Forza Horizon 5" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Forza Horizon 5</h4><span class="platform-price-old">De: R$99,90</span><span class="platform-price-new">Por: 5X de R$23,98</span></div></div>
+                    </div>
+                    <button class="platform-arrow prev" aria-label="Anterior"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button class="platform-arrow next" aria-label="Próximo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+            
+            <div class="platform-carousel-wrapper" id="ps-carousel">
+                <div class="platform-sidebar ps-bg">
+                    <img src="imagens/Game_Score/Playstation.png" alt="PlayStation" class="platform-logo">
+                    <h3>Jogos que vão agradar você.</h3>
+                    
+                </div>
+                <div class="platform-slider">
+                    <div class="platform-slides-inner">
+                        <div class="platform-product-card" data-title="The Last of Us™ Completo" data-price="59.90" data-image-src="imagens/Playstation/The Last.webp"><img src="imagens/Playstation/The Last.webp" alt="The Last of Us" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">The Last of Us™ Completo</h4><span class="platform-price-old">De: R$59,90</span><span class="platform-price-new">Por: 10X de R$64,99</span></div></div>
+                        <div class="platform-product-card" data-title="DEATH STRANDING 2" data-price="399.99" data-image-src="imagens/Playstation/Death_Stranding_2.jpg"><img src="imagens/Playstation/Death_Stranding_2.jpg" alt="Death Stranding 2" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">DEATH STRANDING 2</h4><span class="platform-price-old">De: R$399,99</span><span class="platform-price-new">Por: 10X de R$44,99</span></div></div>
+                        <div class="platform-product-card" data-title="Arc Raiders" data-price="44.80" data-image-src="imagens/Playstation/Arc.png"><img src="imagens/Playstation/Arc.png" alt="Arc Raiders" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Arc Raiders</h4><span class="platform-price-old">De: R$44,80</span><span class="platform-price-new">Por: 3X de R$64,99</span></div></div>
+                        <div class="platform-product-card" data-title="Ghost of Tsushima" data-price="44.80" data-image-src="imagens/Playstation/ghost-of-tsushima-.webp"><img src="imagens/Playstation/ghost-of-tsushima-.webp" alt="Ghost of Tsushima" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Ghost of Tsushima</h4><span class="platform-price-old">De: R$44,80</span><span class="platform-price-new">Por: 10X de R$55,99</span></div></div>
+                        <div class="platform-product-card" data-title="The Last of Us™ Completo" data-price="59.90" data-image-src="imagens/Playstation/Resident.webp"><img src="imagens/Playstation/Resident.webp" alt="The Last of Us" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Resient Evil 4 (Remake)</h4><span class="platform-price-old">De: R$59,90</span><span class="platform-price-new">Por: 10X de R$64,99</span></div></div>
+                    </div>
+                    <button class="platform-arrow prev" aria-label="Anterior"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button class="platform-arrow next" aria-label="Próximo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+
+            <div class="platform-carousel-wrapper" id="nintendo-carousel">
+                <div class="platform-sidebar nintendo-bg">
+                    <img src="imagens/Game_Score/Nintendo.png" alt="Nintendo" class="platform-logo">
+                    <h3>Embarque em uma aventura de tirar o chapéu</h3>
+                    
+                </div>
+                <div class="platform-slider">
+                    <div class="platform-slides-inner">
+                        <div class="platform-product-card" data-title="Super Mario Odyssey™" data-price="349.90" data-image-src="imagens/Nintendo/Super Mario.png"><img src="imagens/Nintendo/Super Mario.png" alt="Super Mario Odyssey" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Super Mario Odyssey™</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 10X de R$39,99</span></div></div>
+                        <div class="platform-product-card" data-title="Metroid Prime™ 4" data-price="349.90" data-image-src="imagens/Nintendo/Metroid.png"><img src="imagens/Nintendo/Metroid.png" alt="Metroid Prime 4" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Metroid Prime™ 4</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 10X de R$48,99</span></div></div>
+                        <div class="platform-product-card" data-title="Zelda: Breath of the Wild" data-price="349.90" data-image-src="imagens/Nintendo/zelda.png"><img src="imagens/Nintendo/zelda.png" alt="Zelda: Breath of the Wild" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Zelda: Breath of the Wild</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 5X de R$49,99</span></div></div>
+                        <div class="platform-product-card" data-title="Donkey Kong™ Banana" data-price="199.90" data-image-src="imagens/Nintendo/Donkey.jpg"><img src="imagens/Nintendo/Donkey.jpg" alt="Donkey Kong" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Donkey Kong™ Banana</h4><span class="platform-price-old">De: R$199,90</span><span class="platform-price-new">Por: 5X de R$17,99</span></div></div>
+                        <div class="platform-product-card" data-title="Mario Kart 8 Deluxe" data-price="349.90" data-image-src="imagens/Nintendo/Mario.webp"><img src="imagens/Nintendo/Mario.webp" alt="Super Mario Odyssey" class="platform-product-image"><div class="platform-card-details"><h4 class="platform-product-title">Mario Kart 8 Deluxe™</h4><span class="platform-price-old">De: R$349,90</span><span class="platform-price-new">Por: 10X de R$39,99</span></div></div>
+                    </div>
+                    <button class="platform-arrow prev" aria-label="Anterior"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+                    <button class="platform-arrow next" aria-label="Próximo"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-highlight-container">
+            <div class="banner-content">
+                <img src="imagens/elden.png" alt="Elden Ring Nightreign" class="banner-image">
+                <div class="banner-text-overlay">
+                    <h2 class="sr-only">Elden Ring Nightreign</h2>
+                    <p class="sr-only">Por: 10X de R$39,99</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="subscription-plans-container" id="assinaturas">
+            <div class="plans-header">
+                <h1 class="section-title center-text">Seja assinante Club Score!</h1>
+                <p class="section-subtitle center-text">Descontos e benefícios exclusivos para todos os jogadores assinantes.</p>
+            </div>
+
+            <div class="plans-grid">
+                <div class="plan-card plan-bronze" data-title="Assinatura Bronze" data-price="25.00" data-image-src="imagens/LOGO.jpeg">
+                    <div class="plan-header"><h3>Assinatura <strong>Bronze</strong></h3></div>
+                    <div class="plan-body">
+                        <div class="plan-discount">10<span class="percent">%</span><span class="off">off</span></div>
+                        <p class="plan-desc">Em todos os jogos</p>
+                        <hr class="plan-divider">
+                        <p class="plan-benefit">Concorra a sorteios de jogos de até R$ 150</p>
+                        <div class="plan-price"><span class="currency">R$</span><span class="amount">25</span><span class="period">/mês</span></div>
+                        <button class="btn-subscribe">ASSINE AGORA!!!</button>
+                    </div>
+                </div>
+                <div class="plan-card plan-gold featured" data-title="Assinatura Ouro" data-price="100.00" data-image-src="imagens/LOGO.jpeg">
+                    <div class="plan-header"><h3>Assinatura <strong>Ouro</strong></h3></div>
+                    <div class="plan-body">
+                        <div class="plan-discount">30<span class="percent">%</span><span class="off">off</span></div>
+                        <p class="plan-desc">Em todos os jogos</p>
+                        <hr class="plan-divider">
+                        <p class="plan-benefit">Concorra a todos os sorteios de jogos</p>
+                        <div class="plan-price"><span class="currency">R$</span><span class="amount">100</span><span class="period">/mês</span></div>
+                        <button class="btn-subscribe btn-featured">ASSINE AGORA!!!</button>
+                    </div>
+                </div>
+                <div class="plan-card plan-silver" data-title="Assinatura Prata" data-price="75.00" data-image-src="imagens/LOGO.jpeg">
+                    <div class="plan-header"><h3>Assinatura <strong>Prata</strong></h3></div>
+                    <div class="plan-body">
+                        <div class="plan-discount">20<span class="percent">%</span><span class="off">off</span></div>
+                        <p class="plan-desc">Em todos os jogos</p>
+                        <hr class="plan-divider">
+                        <p class="plan-benefit">Concorra a sorteios de jogos de até R$ 250</p>
+                        <div class="plan-price"><span class="currency">R$</span><span class="amount">75</span><span class="period">/mês</span></div>
+                        <button class="btn-subscribe">ASSINE AGORA!!!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="team-container" id="nossa-equipe">
+            <div class="team-content" >
+                <img src="imagens/equipe.png" alt="Conheça nossa equipe" class="team-image">
+            </div>
+        </section>
+
+        <section class="history-section">
+            <h3 class="history-title">Nossa história</h3>
+            <div class="history-content">
+                <div class="history-image">
+                    <img src="imagens/Nossa Historia.png" alt="Nossa História">
+                </div>
+                <div class="history-text">
+                    <p>Fundada em 2025, a Game Score surgiu com o propósito de unir a comunidade gamer ao democratizar o acesso aos lançamentos de jogos AAA, que antes eram inacessíveis para muitos devido ao alto custo..</p>
+                    <p>Sua relevância para a comunidade está em:</p>
+                    <ul>
+                        <li>Permitir que mais jogadores vivenciem os lançamentos simultaneamente, fortalecendo a experiência e as discussões coletivas.</li>
+                        <li>Fortalecer a cultura gamer ao fomentar uma comunidade mais unida e diversa.</li>
+                        <li>Incentivar a inovação no mercado, pressionando positivamente a indústria a adotar modelos mais acessíveis e favoráveis ao consumidor.</li>
+                        
+                    </ul>
+                    <p> Em essência, a Game Score é mais que uma empresa; é um pilar de inovação e inclusão que tornou a comunidade gamer mais conectada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contato-nossa-equipe">
+            <h3 class="contact-title">Entre em contato com a nossa equipe</h3>
+            <p class="contact-subtitle">Descontos e benefícios exclusivos para todos os jogadores assinantes.</p>
+            
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <div class="form-group full-width">
+                        <input type="text" placeholder="Nome completo" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefone">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea placeholder="Mensagem" rows="4"></textarea>
+                    </div>
+                    
+                    <div><button type="submit" class="btn-subscribe">ENVIAR</button></div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-wave">
+                <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path fill="#120a2e" d="M0,0 C240,100 1200,100 1440,0 V100 H0 V0 Z"></path>
+                </svg>
+            </div>
+            
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <div class="footer-col links-col">
+                        <div class="footer-links-group">
+                            <a href="#ps-carousel">Playstation</a>
+                            <a href="#xbox-carousel">XBOX</a>
+                            <a href="#nintendo-carousel">Nintendo</a>
+                            <a href="#assinaturas" class="highlight-link">Assinaturas</a>
+                        </div>
+                        <div class="footer-links-group">
+                            <a href="#nossa-equipe">Nossa Equipe</a>
+                            <a href="#contato-nossa-equipe">Contato</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col social-col">
+                        <h4>Nossas Redes</h4>
+                        <div class="social-icons">
+                            <a href="#"><img src="imagens/nossas redes/whats.png" alt="Instagram"></a>
+                            <a href="#"><img src="imagens/nossas redes/face.png" alt="Facebook"></a>
+                            <a href="#"><img src="imagens/nossas redes/yt.png" alt="YouTube"></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col community-col">
+                        <h4>Comunidades</h4>
+                        <div class="community-icons">
+                            <a href="#"><img src="imagens/comunidades/zap.png" alt="WhatsApp"></a>
+                            <a href="#"><img src="imagens/comunidades/tel.png" alt="Telegram"></a>
+                            <a href="#"><img src="imagens/comunidades/twi.png" alt="Twitch"></a>
+                            <a href="#"><img src="imagens/comunidades/dc.png" alt="Discord"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-bar">
+                    <span class="payment-label">Formas de pagamento</span>
+                    <div class="payment-icons">
+                        <img src="imagens/pagamentos/VISA.png" alt="Visa">
+                        <img src="imagens/pagamentos/Mastercard.png" alt="Mastercard">
+                        <img src="imagens/pagamentos/ELO.png" alt="Elo">
+                        <img src="imagens/pagamentos/American.png" alt="Amex">
+                        <img src="imagens/pagamentos/Hipercard.png" alt="Hipercard">
+                   
+                    </div>
+                </div>
+
+                <div class="footer-legal">
+                    <p>GAME SCORE LTDA. CNPJ 12.345.678/0001-90</p>
+                    <p>RUA Fidêncio Ramos, 195 - Vila Olimpia - São Paulo - SP</p>
+                </div>
+            </div>
+        </footer>
+
+        
+    </main>
+
+    <aside class="cart-panel" id="cart-panel">
+        <div class="cart-header"><h3>Meu Carrinho</h3><button class="cart-close-btn" id="cart-close-btn">&times;</button></div>
+        <div class="cart-items-list" id="cart-items-list"></div>
+        <div class="cart-footer">
+            <div class="cart-subtotal"><span>Subtotal:</span><span id="cart-subtotal">R$ 0,00</span></div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
