@@ -1313,22 +1313,157 @@ body {
 
 
 /* ==================================================================== */
-/* 12. RESPONSIVIDADE                                                   */
+/* 12. RESPONSIVIDADE (MOBILE E TABLET)                  */
 /* ==================================================================== */
 
-@media (max-width: 900px) {
-    .header-row-bottom { display: none; }
-    .platform-carousel-wrapper { flex-direction: column; height: auto; }
-    .platform-sidebar { width: 100%; padding: 1.5rem; flex-direction: row; justify-content: space-between; }
-    .platform-sidebar h3 { display: none; }
+/* --- TABLET GRANDE / NOTEBOOK PEQUENO (Max 1024px) --- */
+@media (max-width: 1024px) {
+    /* Diminui a largura máxima para dar mais espaço nas laterais */
+    .header-inner, .platform-showcase-container {
+        max-width: 900px;
+    }
+    
+    /* Carousel: Ajusta o tamanho dos cards para caber mais ou ter mais padding */
+    .platform-product-card {
+        min-width: 180px;
+        max-width: 180px;
+        margin: 15px 10px;
+    }
+
+    /* Rodapé: Remove margens fixas */
+    .footer-content {
+        justify-content: space-around;
+        gap: 30px;
+    }
 }
 
+
+/* --- TABLET VERTICAL / MOBILE GRANDE (Max 768px) --- */
 @media (max-width: 768px) {
-    .header-row-top { flex-direction: column; gap: 10px; }
-    .search-wrap { width: 100%; margin: 10px 0; }
-    .features-bar { flex-direction: column; align-items: flex-start; }
-    .plans-grid { flex-direction: column; }
-    .history-content { flex-direction: column; }
-    .checkout-container, .cart-page-container { grid-template-columns: 1fr; display: flex; flex-direction: column-reverse; }
-    .platform-arrow { display: none; }
+    /* --- HEADER --- */
+    /* Empilha os elementos principais */
+    .header-row-top {
+        flex-direction: column;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    /* Centraliza e expande a busca */
+    .search-wrap {
+        width: 100%;
+        max-width: 90%;
+        order: 3; /* Move a busca para baixo */
+        margin: 10px 0;
+    }
+    
+    /* Esconde o menu secundário (Linha 2) */
+    .header-row-bottom { 
+        display: none; 
+    }
+    
+    /* --- LAYOUTS GERAIS --- */
+    /* Garante que o conteúdo e o checkout virem coluna */
+    .checkout-container, 
+    .cart-page-container {
+        grid-template-columns: 1fr; /* Uma única coluna */
+        gap: 1.5rem;
+        padding: 0 1rem;
+        /* Coloca o resumo no topo e o formulário de pagamento embaixo (melhor UX) */
+        display: flex; 
+        flex-direction: column-reverse; 
+    }
+
+    /* --- HERO SLIDER --- */
+    .hero-slider-container {
+        height: 60vh;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    .platform-ctas-container {
+        bottom: 40px;
+        gap: 10px;
+    }
+    .cta-platform img { height: 25px; }
+
+
+    /* --- CARROSSEL DE PRODUTOS --- */
+    /* Quebra o sidebar e o slider em coluna (vertical) */
+    .platform-carousel-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    .platform-sidebar {
+        width: 100%;
+        padding: 1.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        /* Esconde o título no mobile para focar no logo e link */
+        height: 80px;
+        align-items: center;
+    }
+    .platform-sidebar h3 { 
+        display: none; 
+    }
+    .platform-logo {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+
+    /* Oculta as setas para forçar o scroll touch horizontal */
+    .platform-arrow { 
+        display: none; 
+    }
+
+    /* Cards - Ajusta o tamanho para caber mais facilmente */
+    .platform-product-card {
+        min-width: 160px;
+        max-width: 160px;
+    }
+
+    /* --- SEÇÕES GERAIS --- */
+    .history-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .plans-grid { 
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+
+/* --- MOBILE (Max 480px) --- */
+@media (max-width: 480px) {
+    /* Diminui padding geral */
+    .header-inner, 
+    .cart-page-container, 
+    .checkout-container {
+        padding: 0 0.5rem;
+    }
+    
+    /* Simplifica as vantagens */
+    .features-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+
+    /* Simplifica ainda mais o card de produto */
+    .platform-product-card {
+        min-width: 140px;
+        max-width: 140px;
+    }
+    .platform-product-image {
+        height: 180px;
+    }
+
+    /* Reduz a barra de pagamento do footer */
+    .payment-bar {
+        flex-direction: column;
+        text-align: center;
+    }
 }
