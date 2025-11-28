@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // ====================================================================
-    // 1. GESTÃO DO CARRINHO (COM LOCALSTORAGE)
+    // 1. GESTÃO DO CARRINHO 
     // ====================================================================
 
     const cartPanel = document.getElementById('cart-panel');
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ====================================================================
-    // 5. BARRA DE PESQUISA (DADOS CORRIGIDOS PELO HTML)
+    // 5. BARRA DE PESQUISA 
     // ====================================================================
 
     const PRODUCTS = [
