@@ -296,7 +296,7 @@ body {
 
 
 /* ==================================================================== */
-/* 3. HERO SLIDER (CARROSSEL PRINCIPAL)                                 */
+/* 3.  (CARROSSEL PRINCIPAL)                                 */
 /* ==================================================================== */
 
 .hero-slider-container {
@@ -412,7 +412,7 @@ body {
 
 
 /* ==================================================================== */
-/* 4.  (VANTAGENS)                                          */
+/* 4.  VANTAGENS                                          */
 /* ==================================================================== */
 
 .features-bar-container {
@@ -441,7 +441,7 @@ body {
     text-align: left;
 }
 
-/* AQUI ESTÁ A CORREÇÃO */
+/* Icones */
 .feature-icon {
     width: 50px;       /* Tamanho do ícone */
     height: 50px;      /* Tamanho do ícone */
